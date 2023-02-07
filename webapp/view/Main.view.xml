@@ -1,7 +1,13 @@
 <mvc:View controllerName="exercicio3.controller.Main"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:l="sap.ui.layout"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <content />
+            <content>
+            <l:VerticalLayout id="vtl1" class="sapUiContentPadding">
+                <Input id="inp1" value="{pessoa>/nome}" liveChange="true" editable="{pessoa>/status}" />
+                <CheckBox id="chb1"  selected="{pessoa>/status}" text="Ativar Input" />
+            </l:VerticalLayout>
+        </content>
     </Page>
 </mvc:View>
